@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
 ###########################################
     for epi in range(EPISODES):
-        Pos_UE = np.array([[np.random.rand(1) * 10, np.random.rand(1) * 10, 1.5], [np.random.rand(1) * 10, np.random.rand(1) * 10, 1.5]], dtype = np.float)  ## UE positions are randomly generated in each episode
+        Pos_UE = np.array([[np.random.rand(1) * 10, np.random.rand(1) * 10, 1.5], [np.random.rand(1) * 10, np.random.rand(1) * 10, 1.5]], dtype = "object") #dtype = np.float)  ## UE positions are randomly generated in each episode
         H_U2B_LoS, H_R2B_LoS, H_U2R_LoS = MuMIMO_env.H_GenFunLoS(Pos_BS, Pos_IRS, Pos_UE, ArrayShape_BS, ArrayShape_IRS, ArrayShape_UE)  ## LoS component
         SumRate_seq = np.zeros(block_duration) ### Check the performance of ESC
 
